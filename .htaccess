@@ -1,0 +1,18 @@
+# Deny access to .htaccess
+<Files .htaccess>
+    Order allow,deny
+    Deny from all
+</Files>
+
+# Disable browsing
+Options -Indexes
+IndexIgnore *
+
+RewriteEngine On
+
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://www.marineraoul.fr/$1 [R,L]
+
+RewriteRule ^public/ - [L]
+
+RewriteRule ^(.*)$ /public/index.php?route=$1 [QSA,L]
