@@ -1,0 +1,183 @@
+/* Fonts */
+@font-face{
+	font-family: satoshi-medium;
+	src: url("../../../public/font/Satoshi-Medium.woff2");
+}
+@font-face{
+	font-family: chubbo-mediumitalic;
+	src: url("../../../public/font/Chubbo-MediumItalic.woff2");
+}
+@font-face{
+	font-family: chubbo-italic;
+	src: url("../../../public/font/Chubbo-Italic.woff2");
+}
+
+/* Global */
+body{
+	margin: 0;
+	height: 100%;
+	min-height: 100%;
+	font-size: 15px;
+}
+img{
+	display: block;
+}
+p{
+	margin: 0;
+}
+.container{
+	position: static;
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 55px;
+}
+.w50{
+	width: 50%;
+}
+.w100{
+	width: 100%;
+}
+.m-30{
+	margin: 30px;
+}
+.m-50{
+	margin: 50px;
+}
+
+/* Navbar */
+header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 55px;
+	line-height: 55px;
+	background: #FFF;
+	z-index: 1;
+	border-bottom: 1px solid black;
+}
+nav{
+	display: flex;
+	justify-content: space-between;
+	margin: 0 20px;
+}
+header a{
+	font-family: satoshi-medium;
+	color: #000;
+	text-decoration: none;
+	font-size: 1.4rem;
+}
+header a:hover{
+	color: #FFC3D9;
+}
+
+/* Article */
+.article-text{
+	line-height: 130%;
+	font-family: satoshi-medium;
+}
+.article-text content span{
+	font-style: italic;
+}
+.article-text h1{
+	font-family: chubbo-mediumitalic;
+	font-size: 200%;
+	line-height: 130%;
+	margin: 0;
+}
+.article-text ul{
+	list-style-type: none;
+	padding: 0;
+	font-family: chubbo-italic;
+}
+.article-cat{
+	font-family: chubbo-mediumitalic;
+}
+.fixed{
+	position: fixed;
+	bottom: 0;
+}
+.fixedtop{
+	position: fixed;
+	top: 55px;
+}
+
+/* Infos */
+.infos{
+	display: block;
+	position: absolute;
+	height: calc(100%-55px);
+	top: 55px;
+	bottom: 0;
+	background: #FFC3D9;
+	font-family: satoshi-medium;
+	line-height: 130%;
+}
+.contacts{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin-top: 35px;
+	display: flex;
+	flex-direction: column;
+	font-family: chubbo-italic;
+}
+.contacts a{
+	text-decoration: none;
+	color: #000;
+}
+.contacts a:hover{
+	color: #FF75A8;
+}
+
+@media (max-width: 600px){
+	.sm-25{
+		margin: 25px !important;
+	}
+	.infos{
+		font-size: 1.4rem;
+	}
+}
+@media (min-width: 601px) and (max-width: 1200px){
+	/* Global */
+	.mw50{
+		width: 50% !important;
+	}
+	.mreverse{
+		flex-direction: row-reverse;
+	}
+	/* Infos */
+	.contacts{
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	/* Article */
+	.text-right{
+		text-align: right;
+	}
+}
+@media (min-width: 1201px){
+	/* Global */
+	header{
+		line-height: 60px !important;
+	}
+	.lw50{
+		width: 50% !important;
+	}
+	.lreverse{
+		flex-direction: row-reverse;
+	}
+	/* Infos */
+	.infos{
+		font-size: 25px;
+	}
+	.contacts{
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	/* Article */
+	.text-right{
+		text-align: right;
+	}
+}

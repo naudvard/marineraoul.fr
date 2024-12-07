@@ -1,0 +1,7 @@
+robots.txt
+sitemap.xml
+src/public/img
+src/public/font
+
+# config, contains secrets
+config.php
